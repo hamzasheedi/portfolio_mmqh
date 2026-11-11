@@ -1,0 +1,15 @@
+{
+  "routes": {
+    "initialJavaScriptBytes": 174080,
+    "initialTransferBytes": 1048576,
+    "aboveFoldImagesBytes": 256000,
+    "fontsBytes": 102400,
+    "thirdPartyBytes": 102400
+  },
+  "lighthouse": {
+    "performance": 0.95,
+    "accessibility": 0.95,
+    "bestPractices": 0.95,
+    "seo": 0.95
+  }
+}

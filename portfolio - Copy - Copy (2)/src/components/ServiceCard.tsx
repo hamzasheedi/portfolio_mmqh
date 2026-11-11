@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { ArrowUpRight, BarChart3, Boxes } from "lucide-react";
+export function ServiceCard({ kind, title, description, href, number }: { kind: "financial" | "web"; title: string; description: string; href: string; number: string }) { const Icon = kind === "financial" ? BarChart3 : Boxes; return <article className="card service-card"><div><div className="icon"><Icon size={22}/></div><span className="number">{number}</span><h3 style={{fontSize:"2rem",marginTop:".6rem"}}>{title}</h3><p>{description}</p></div><Link className="button secondary" href={href}>Explore {kind === "financial" ? "financial operations" : "web development"} <ArrowUpRight size={17}/></Link></article>; }

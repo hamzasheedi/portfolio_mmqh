@@ -1,0 +1,2 @@
+"use client";
+export default function ErrorPage({ reset }: { reset: () => void }) { return <section className="section"><div className="container"><span className="eyebrow">Something went wrong</span><h1>We could not load this view.</h1><p>No submitted details are shown or logged here. Try again, or use the contact route.</p><button className="button" onClick={reset}>Try again</button></div></section>; }

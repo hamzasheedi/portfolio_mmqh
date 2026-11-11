@@ -1,0 +1,31 @@
+{
+  "name": "finweb-solution",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test",
+    "format:check": "prettier --check .",
+    "audit:a11y": "echo 'axe audit requires Playwright tooling'",
+    "audit:performance": "echo 'Lighthouse CI requires @lhci/cli'"
+  },
+  "dependencies": {
+    "lucide-react": "^1.25.0",
+    "next": "^16.2.10",
+    "nodemailer": "^6.10.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}

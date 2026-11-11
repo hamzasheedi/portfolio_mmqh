@@ -1,0 +1,3 @@
+import {NextResponse} from "next/server";
+import {privacyRequestSchema} from "@/lib/schemas/privacy-request";
+export async function POST(request:Request){const parsed=privacyRequestSchema.safeParse(await request.json().catch(()=>null));if(!parsed.success)return NextResponse.json({error:{code:"VALIDATION_FAILED",message:"Review the request fields.",requestId:crypto.randomUUID()}},{status:400,headers:{"Cache-Control":"no-store"}});const days=parsed.data.jurisdiction==="gdpr"?30:parsed.data.jurisdiction==="ccpa"?45:45;return NextResponse.json({reference:`DSR-${crypto.randomUUID().slice(0,8).toUpperCase()}`,status:"verification_required",targetDays:days},{status:202,headers:{"Cache-Control":"no-store"}});}
